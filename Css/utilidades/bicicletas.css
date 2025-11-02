@@ -1,0 +1,12 @@
+/* .bikeimg {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+grid-template-columns: 1fr 1fr;
+} */
+.divbik {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

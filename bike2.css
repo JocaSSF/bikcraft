@@ -1,0 +1,104 @@
+.bikep {
+  background-image: linear-gradient(to right, var(--cor-b) 30%, var(--cor-c11) 0%);
+
+  /* Não serve
+    box-shadow: inset 120px 0px white; */
+}
+.bicicleta-div2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+background: url(/10-projeto-final/1028-orcamento/bikcraft/img/dec/top-right.svg) no-repeat top 40px right 20px;
+}
+/* .bicicletas-imagem {
+  position: relative;
+}
+.bicicletas-imagem span {
+  background-color: var(--cor-c12);
+  padding: 8px 16px 8px 8px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right:0px;
+} */
+.bicicletas-imagem {
+  display: grid;
+}
+.bicicletas-imagem img {
+  grid-area: 1/1;
+}
+.bicicletas-imagem span {
+  background-color: var(--cor-c12);
+  padding: 8px 16px 8px 8px;
+  display: inline-block;
+  grid-area: 1/1;
+  place-self: start end;
+  margin-top: 20px;
+  border-radius: 4px 0 0 4px;
+}
+.bicicleta-cont {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+.bicicleta-cont h2,
+.bicicleta-cont p {
+  grid-column: 1/-1;
+}
+.bicicleta-cont h2 {
+  margin-bottom: 20px;
+}
+.bicicleta-cont h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-bottom: 8px;
+}
+.bicicleta-cont p {
+  margin-bottom: 32px;
+}
+.bicicleta-cont a {
+  place-self: end;
+}
+.bicicleta-cont li {
+  display: flex;
+  align-items: center;
+}
+.bicicleta-cont img {
+  width: 24px;
+  margin-right: 8px;
+}
+/* .bicicleta-cont li + li{
+   margin-top: 16px;
+} */
+.bicicleta-cont ul {
+  display: grid;
+  gap: 16px;
+}
+@media (max-width: 800px) {
+  .bicicleta-div2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .bikep {
+  background: var(--cor-c11);
+}
+@media (max-width: 600px) {
+  .bicicleta-cont {
+    grid-template-columns: 1fr;
+  }
+  .bicicleta-div2 ul {
+    margin-bottom: 32px;
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bicicleta-div2 a {
+    place-self: start;
+  }
+}

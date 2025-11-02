@@ -1,0 +1,165 @@
+#orc {
+  background: linear-gradient(var(--cor-c11) 800px, var(--cor-c1) 0px);
+}
+
+.orc-form {
+  display: grid;
+  padding-bottom: 120px;
+  grid-template-columns: 5fr 7fr;
+}
+.orc-form h2 {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.orc-form h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  position: absolute;
+  left: -12px;
+}
+.orc-pro,
+.orc-dad {
+  padding: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.orc-pro {
+  border-radius: 5px 0 0 5px;
+  background: var(--cor-c12)
+    url(/10-projeto-final/1029-decoracao/bikcraft/img/dec/bottom-right.svg)
+    no-repeat bottom 20px right 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 20px;
+}
+.orc-pro label {
+  color: var(--cor-c4);
+  background: var(--cor-c10);
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+}
+.orc-pro input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.orc-pro input:checked + label {
+  background: var(--cor-b);
+  color: var(--cor-c11);
+}
+.orc-pro label span {
+  display: none;
+}
+.orc-pro input:focus + label {
+  box-shadow: 0 0 0 2px var(--cor-p1);
+  border-color: var(--cor-c12);
+}
+.orc-pro label:focus {
+  box-shadow: 0 0 0 2px var(--cor-p1);
+}
+.orc-pro input:focus + label {
+  box-shadow: 0 0 0 2px var(--cor-p1);
+  border-color: var(--cor-c12);
+}
+.orc-pro input:checked + label span {
+  display: inline-block;
+}
+.orc-pro label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--cor-c6);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.orc-pro input:checked + label::before {
+  border-color: var(--cor-c7);
+  box-shadow: inset 0 0 0 3px var(--cor-b), inset 0 0 0 6px var(--cor-c7);
+}
+.orc-pro > * {
+  grid-column: 1/-1;
+}
+.orc-pro > label {
+  grid-column: initial;
+}
+.orc-dad {
+  border-radius: 0 5px 5px 0;
+  background: var(--cor-b)
+    url(/10-projeto-final/1029-decoracao/bikcraft/img/dec/bottom-right.svg)
+    no-repeat bottom 20px right 20px;
+}
+.orc-pro label {
+  background: var(--cor-c11);
+  padding: 20px;
+}
+.orc-cont {
+  background: #222;
+  padding: 20px;
+  display: none;
+}
+
+#bikcraft:checked ~ #orc-bikcraft,
+#seguro:checked ~ #orc-seguro {
+  display: grid;
+  gap: 20px;
+}
+.orc-cont h2,
+.orc-dad h2:nth-of-type(n + 2) {
+  margin-top: 20px;
+}
+.orc-det {
+  background: var(--cor-b);
+  padding: 20px;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  align-items: center;
+}
+.orc-det li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.orc-det li img {
+  width: 16px;
+  margin-right: 8px;
+}
+.orc-pro input:checked + label + .orc-det {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .orc-pro,
+  .orc-dad {
+    padding: 32px;
+  }
+}
+@media (max-width: 800px) {
+  .orc-form {
+    grid-template-columns: 1fr;
+  }
+  .orc-dad {
+    border-radius: 0 0 5px 5px;
+  }
+  .orc-pro {
+    border-radius: 5px 5px 0 0;
+    background: var(--cor-c12);
+  }
+}
+@media (max-width: 400px) {
+  .orc-pro {
+    grid-template-columns: 1fr;
+  }
+}

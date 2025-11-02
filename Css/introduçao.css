@@ -1,0 +1,68 @@
+.main-id {
+  box-shadow: inset 0 -120px var(--cor-b);
+  background: var(--cor-c12) url(/10-projeto-final/1029-decoracao/bikcraft/img/dec/bottom-left.svg) no-repeat bottom 160px left 20px;
+}
+
+.main-id {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem 2.5rem;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+.divmain {
+  align-self: end;
+  padding-bottom: 200px;
+}
+.main-id img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.main-id h1 {
+  margin-bottom: 2rem;
+}
+
+.main-id p {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .main-id .mainh1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .main-id {
+    background: var(--cor-c11);
+    padding-top: 40px;
+    box-shadow: inset 0 -60px var(--cor-b);
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .divmain {
+    padding-bottom: 0px;
+  }
+  .main-id img {
+    height: 300px;
+    width: 100%;
+  }
+  .header-menu {
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-id h1 {
+    font-size: 48px;
+  }
+  .main-id p {
+    font-size: 18px;
+  }
+}

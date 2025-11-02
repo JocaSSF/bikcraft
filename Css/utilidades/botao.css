@@ -1,0 +1,46 @@
+.conte {
+  box-sizing: border-box;
+  max-width: 1350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.maina {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  color: var(--cor-p5);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: 600;
+  max-width: max-content;
+}
+.maina:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+.maina.seta {
+  display: flex;
+  align-items: center;
+}
+.maina.seta:hover:after {
+  transform: translateX(4px);
+}
+.maina.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url(/10-projeto-final/1020-bicicletas/bikcraft/img/icones/seta.svg);
+  transition: transform 0, 2s;
+}
+@media (max-width: 600px) {
+  .maina {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}

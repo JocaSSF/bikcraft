@@ -1,0 +1,107 @@
+.par {
+  display: flex;
+  padding: 32px;
+  border-left: 2px solid var(--cor-c2);
+  /* border-bottom: 2px solid var(--cor-c2); */
+}
+.parceiros-section h2 {
+  margin-bottom: 60px;
+}
+.parceiros {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+}
+.parceiros-section {
+  padding-top: 60px;
+  padding-bottom: 120pxs;
+}
+.parceiros-section img {
+  margin: auto;
+}
+.parceiros-section li:first-child,
+.parceiros-section li:nth-child(5) {
+  border-left: none;
+}
+.parceiros-section li:nth-child(n + 5) {
+  border-top: 2px solid var(--cor-c2);
+}
+.dep-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-p1);
+  overflow: hidden;
+}
+.dep-section img {
+  border-radius: 0px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.dep-div2 {
+  padding: 40px 40px 80px 80px;
+  align-self: end;
+  background: url(/10-projeto-final/1029-decoracao/bikcraft/img/dec/bottom-right-p.svg)
+    no-repeat bottom 40px right 40px ;
+}
+.dep-div2 p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 32px;
+  max-width: 32ch;
+  position: relative;
+}
+.dep-div2 p::before {
+  content: "“";
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+  left: -50px;
+  top: -20px;
+}
+.dep-div2 p:after {
+  content: "”";
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+@media (max-width: 800px) {
+  .parceiros-section {
+    padding-bottom: 60px;
+  }
+  .parceiros-section h2 {
+    margin-bottom: 20px;
+  }
+  .parceiros-section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parceiros-section li:nth-child(n + 3) {
+    border-top: 2px solid var(--cor-c2);
+  }
+  .parceiros-section li:nth-child(odd) {
+    border-left: none;
+  }
+  .dep-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .dep-div2 {
+    padding: 40px 20px;
+    justify-self: center;
+  }
+  .dep-section img {
+    max-height: 200px;
+  }
+  .par {
+    display: flex;
+    padding: 20px;
+  }
+}
+@media (min-width:1200px){
+  .dep-section img{
+    max-height: 520px;
+  }
+}
